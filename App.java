@@ -8,7 +8,7 @@ public class App{
         Scanner sc = new Scanner(System.in);
 
         while (true) { 
-            System.out.println("1.Display All Students\n2.Add new Student\n3.Exit");
+            System.out.println("1.Display All Students\n2.Add new Student\n3.Search Student by ID\n4.Exit");
             System.out.print("Please enter the choice: ");
             int choice = sc.nextInt();
             switch(choice){
@@ -28,6 +28,17 @@ public class App{
                     System.out.println("Added the Student " + name + " with ID: " + id + " & Branch: "+ branch + " into database successfully.");
                     break;
                 case 3:
+                    System.out.print("Enter the Student ID to search the database: ");
+                    int student_id = sc.nextInt();
+                    Student searched_student = studs.searchStudent(student_id);
+                    if(searched_student == null){
+                        System.out.println("Student Not Found.");
+                    }else{
+                        System.out.println("Student Found!");
+                        System.out.println("ID: "+ searched_student.getId() + " Name: " + searched_student.getName() + " Branch: " + searched_student.getBranch());
+                    }
+
+                case 4:
                     System.out.println("Exiting from the Student Management System Application");
                     return;
                 default:

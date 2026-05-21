@@ -19,4 +19,13 @@ public class StudentManagement {
     public ArrayList<Student> AllStudentInfo(){
         return students;
     }
+
+    public Student searchStudent(int id){
+        for (Student s: students){
+            if(s.getId() == id){
+                return s;
+            }
+        }
+        return null;
+    }
 }
