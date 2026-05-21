@@ -16,5 +16,7 @@ public class StudentManagement {
         students.add(stud);
     }
 
-    
+    public ArrayList<Student> AllStudentInfo(){
+        return students;
+    }
 }
