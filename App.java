@@ -8,7 +8,7 @@ public class App{
         Scanner sc = new Scanner(System.in);
 
         while (true) { 
-            System.out.println("1.Display All Students\n2.Add new Student\n3.Search Student by ID\n4.Exit");
+            System.out.println("1.Display All Students\n2.Add new Student\n3.Search Student by ID\n4.Update Student\n5.Exit");
             System.out.print("Please enter the choice: ");
             int choice = sc.nextInt();
             switch(choice){
@@ -37,8 +37,31 @@ public class App{
                         System.out.println("Student Found!");
                         System.out.println("ID: "+ searched_student.getId() + " Name: " + searched_student.getName() + " Branch: " + searched_student.getBranch());
                     }
-
+                    break;
                 case 4:
+
+                    System.out.print("Enter Student ID to update: ");
+                    int update_id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Enter New Name: ");
+                    String new_name = sc.nextLine();
+
+                    System.out.print("Enter New Branch: ");
+                    String new_branch = sc.nextLine();
+
+                    boolean updated = studs.updateStudent(update_id, new_name, new_branch);
+
+                    if(updated){
+                        System.out.println("Student Updated Successfully!");
+                    }
+                    else{
+                        System.out.println("Student Not Found!");
+                    }
+
+                    break;
+
+                case 5:
                     System.out.println("Exiting from the Student Management System Application");
                     return;
                 default:

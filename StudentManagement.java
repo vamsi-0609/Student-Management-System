@@ -28,4 +28,20 @@ public class StudentManagement {
         }
         return null;
     }
+
+    public boolean updateStudent(int id, String newName, String newBranch){
+
+    for(Student s : students){
+
+        if(s.getId() == id){
+
+            s.setName(newName);
+            s.setBranch(newBranch);
+
+            return true;
+        }
+    }
+
+    return false;
+}
 }
