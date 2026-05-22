@@ -32,7 +32,7 @@ public class App{
                     int student_id = sc.nextInt();
                     Student searched_student = studs.searchStudent(student_id);
                     if(searched_student == null){
-                        System.out.println("Student Not Found.");
+                        System.out.println("Student is not there in our database.");
                     }else{
                         System.out.println("Student Found Successfully!");
                         System.out.println("ID: "+ searched_student.getId() + " Name: " + searched_student.getName() + " Branch: " + searched_student.getBranch());
