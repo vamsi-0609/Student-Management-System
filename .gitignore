@@ -1,0 +1,19 @@
+# IntelliJ
+.idea/
+*.iml
+/lib
+
+# VS Code
+.vscode/
+
+# Maven build folder
+target/
+
+# Compiled Java files
+*.class
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
