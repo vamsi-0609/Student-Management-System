@@ -96,6 +96,7 @@ public class StudentDao{
         }
     }
 
+    // Working on search feature validation
     public void searchStudent(int id){
     try {
         String query = "SELECT * FROM students WHERE id = ?";
